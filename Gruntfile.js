@@ -29,7 +29,7 @@ module.exports = function (grunt) {
             },
             minify: {
                 files: [{
-                    'style.min.css': ['style/*.css']
+                    'style.min.css': ['style/*.css', 'style/**/*.css']
 
                 }]
             }
@@ -44,6 +44,8 @@ module.exports = function (grunt) {
                          'style.min.css',
                          'view/*.html',
                          'view/**/*.html',
+                         'style /*.css', 
+                         'style/**/*.css',
                          'Index.html',
                      ]
                  },
@@ -63,7 +65,7 @@ module.exports = function (grunt) {
                 tasks: ['concat', 'uglify']
             },
             cssmin: {
-                files: ['style/*.css'],
+                files: ['style/*.css', 'style/**/*.css'],
                 tasks: ['cssmin:minify'],
                 options: {
                     debounceDelay: 250,

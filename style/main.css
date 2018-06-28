@@ -23,9 +23,11 @@ input[type=password], select{
    cursor: pointer;
    width: 100%;
 }
-.nav-link {
-     opacity: 0.8 !important;
+.nav-link:hover {
+    width: 100% ;
+    background-color: rgb(107, 102, 102); 
 }
+
 
 button {
     background-color: black;

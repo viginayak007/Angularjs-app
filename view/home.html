@@ -6,7 +6,6 @@
                     <div class="imgcontainer">
                         <img src="img/yourlogohere.png" alt="Logo Here" class="logohere">
                     </div>
-                    <hr style="color:white;">
                     <div class="collapse navbar-collapse">
                         <ul class="flex-md-column flex-row navbar-nav w-100 justify-content-between">
                             <div ng-repeat="menu in Data track by $index">
@@ -19,8 +18,8 @@
                                          <i class="fa fa-angle-down" ng-show="menuDownArrow"></i> 
                                         {{ menu.name }}
                                     </li>
-                                    <div style="padding-left:20px" ng-repeat="submenu in menu.submenu" ng-show="menuDownArrow">
-                                        <li class="nav-link" ng-click="changePage(submenu.link)" style="padding-left: 8px">{{ submenu.name }}</li>
+                                    <div ng-repeat="submenu in menu.submenu" ng-show="menuDownArrow">
+                                        <li style="padding-left:20px"class="nav-link" ng-click="changePage(submenu.link)" style="padding-left: 8px">{{ submenu.name }}</li>
                                     </div>
                                 </div>
                             </div>
