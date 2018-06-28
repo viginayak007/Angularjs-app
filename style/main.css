@@ -7,18 +7,29 @@ body {
 }
 
 input[type=text],
-input[type=password] {
+input[type=password], select{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc !important;
     box-sizing: border-box !important;
+}
+.nav-link{
+   background-color: black;
+   color: white !important;
+   margin: 1px 0;
+   border: none;
+   cursor: pointer;
+   width: 100%;
+}
+.nav-link {
+     opacity: 0.8 !important;
 }
 
 button {
     background-color: black;
-    color: white;
+    color: white !important;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -27,7 +38,7 @@ button {
 }
 
 button:hover {
-    opacity: 0.8;
+    opacity: 0.8 !important;
 }
 
 .nav-link{

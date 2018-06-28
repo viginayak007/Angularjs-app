@@ -1,13 +1,13 @@
 {
     "subcategories": [{
             "id": 1,
-            "catID":1,
+            "category": "Electronics",
             "name": "TV",
             "desc": "-"
         },
         {
             "id": 2,
-            "catID": 1,
+            "category": "Electronics",
             "name": "Mobile",
             "desc": "-"
         }

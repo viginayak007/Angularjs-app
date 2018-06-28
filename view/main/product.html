@@ -8,21 +8,41 @@
                 <form>
                     <div class="form-group">
                         <label for="name">Product Name:</label>
-                        <input type="text" class="form-control input-sm" id="name">
+                        <input type="text"  id="name" ng-model="data.name">
                     </div>
                     <div class="form-group">
                         <label id="subcategory" for="name">Select Subcategory:</label>
-                        <select class="form-control input-sm" id="subcategory">
-                            <option>--Select--</option>
-                            <option>A</option>
+                        <select id="subcategory" ng-model="data.subcategory" ng-options="subcategory.name for subcategory in subcategories" required>
+                            <option value="">--Select--</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="desc">Description:</label>
-                        <input type="password" class="form-control input-sm" id="desc">
+                        <input type="text" id="desc" ng-model="data.desc">
                     </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="submit" >Submit</button>
                 </form>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <h5>View Subcategory</h5>
+                <table class="table table-bordered table-responsive">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Subcategory</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="product in products">
+                            <td>{{ product.id }}</td>
+                            <td>{{ product.subcategory }}</td>
+                            <td>{{ product.name }}</td>
+                            <td>{{ product.price }}</td>
+                        </tr>
+                    </tbody>
+                </table>   
             </div>
         </div>
     </div>

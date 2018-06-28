@@ -1,28 +1,53 @@
 <div class="container" ng-controller="subcategoryController">
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
-            <h1>Subcategory</h1>{{ accordianHeader }}
+            <h1>Subcategory</h1>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="col-sm-12 col-md-12 col-lg-8">
+                <h5>Add new Category</h5>
                 <form>
-                    <div class="form-group">
-                        <label for="name">Subcategory:</label>
-                        <input type="text" class="form-control input-sm" id="name">
-                    </div>
-                    <div class="form-group">
-                        <label id="subcategory" for="name">Select category:</label>
-                        <select class="form-control input-sm" id="subcategory">
-                            <option>--Select--</option>
-                            <option>A</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="desc">Description:</label>
-                        <input type="password" class="form-control input-sm" id="desc">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
+                     <div class="container">
+                         <div class="form-group">
+                             <label for="name">Subcategory:</label>
+                             <input type="text" ng-model="data.name" id="name" required> 
+                         </div>
+                         <div class="form-group">
+                             <label id="subcategory" for="name">Select category:</label>
+                             <select  id="subcategory" ng-model="data.selectCategory" ng-options="category.name for category in categories" required>
+                                 <option value="">--Select--</option>
+                             </select>
+                         </div>
+                         <div class="form-group">
+                             <label for="desc">Description:</label>
+                             <input type="text"  ng-model="data.desc" id="desc">
+                         </div>
+                         <button type="submit" >Submit</button>
+                     </div>
                 </form>
+            </div>
+            <div class=" col-sm-12 col-md-12 col-lg-8">
+              <h5>View subcategory</h5>
+              <div class="container">
+                  <table class="table table-bordered table-responsive">
+                      <thead>
+                          <tr>
+                              <th>ID</th>
+                              <th>Category</th>
+                              <th>Name</th>
+                              <th>Desc</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr ng-repeat="subcategory in subcategories">
+                              <td>{{ subcategory.id }}</td>
+                              <td>{{ subcategory.category }}</td>
+                              <td>{{ subcategory.name }}</td>
+                              <td>{{ subcategory.desc }}</td>
+                          </tr>
+                      </tbody>
+                  </table>   
+              </div>
             </div>
         </div>
     </div>
