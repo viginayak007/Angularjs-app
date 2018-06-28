@@ -1,0 +1,33 @@
+{
+    "products": [{
+            "id": 1,
+            "cat": "TV",
+            "name": "Samsung",
+            "statID": "1"
+        },
+        {
+            "id": 2,
+            "cat": "TV",
+            "name": "Onida",
+            "statID": "1"
+        },
+        {
+            "id": 3,
+            "cat": "Mobile",
+            "name": "Nokia",
+            "statID": "1"
+        },
+        {
+            "id": 4,
+            "cat": "TV",
+            "name": "Sony",
+            "statID": "1"
+        },
+        {
+            "id": 5,
+            "cat": "Mobile",
+            "name": "Apple",
+            "statID": "1"
+        }
+    ]
+}

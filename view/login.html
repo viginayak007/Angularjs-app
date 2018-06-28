@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-8 col-lg-4">
+            <form class="loginform">
+                <div class="imgcontainer">
+                    <img src="img/yourlogohere.png" alt="Logo Here" class="logohere">
+                </div>
+                <div class="alert alert-danger" ng-show="error">
+                    <strong>Oops </strong> Username Password incorrect!!
+                </div>
+                <div class="container">
+                    <label for="uname">
+                        <b>Username</b>
+                    </label>
+                    <input type="text" placeholder="Enter Username" name="uname" ng-model="user.ID" required>
+        
+                    <label for="psw">
+                        <b>Password</b>
+                    </label>
+                    <input type="password" placeholder="Enter Password" name="psw" ng-model="user.password" required>
+        
+                    <button type="submit" ng-click="submit()">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                    <span class="psw">Forgot
+                        <a href="#">password?</a>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

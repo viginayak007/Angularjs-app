@@ -1,0 +1,15 @@
+{
+    "subcategories": [{
+            "id": 1,
+            "catID":1,
+            "name": "TV",
+            "desc": "-"
+        },
+        {
+            "id": 2,
+            "catID": 1,
+            "name": "Mobile",
+            "desc": "-"
+        }
+    ]
+}

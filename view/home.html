@@ -1,0 +1,47 @@
+<div class="container-fluid h-100">
+    <div class="row h-100">
+        <aside class="col-12 col-md-2 p-0 bg-dark">
+            <div class="bg-dark" style="height:800px;">
+                <nav class="navbar navbar-expand navbar-dark bg-dark flex-md-column flex-row align-items-start">
+                    <div class="imgcontainer">
+                        <img src="img/yourlogohere.png" alt="Logo Here" class="logohere">
+                    </div>
+                    <hr style="color:white;">
+                    <div class="collapse navbar-collapse">
+                        <ul class="flex-md-column flex-row navbar-nav w-100 justify-content-between">
+                            <div ng-repeat="menu in Data track by $index">
+                                <div ng-if="!menu.submenu">
+                                    <li class="nav-link" ng-click="changePage(submenu.link)">{{ submenu.name }}</li>
+                                </div>
+                                <div class="nav-item dropdown" ng-if="menu.submenu">
+                                    <li ng-click="selectedMenuIndex = $index; menuDownArrow = !menuDownArrow" class="nav-link">
+                                         <i class="fa fa-angle-right"  ng-hide="menuDownArrow"></i>
+                                         <i class="fa fa-angle-down" ng-show="menuDownArrow"></i> 
+                                        {{ menu.name }}
+                                    </li>
+                                    <div style="padding-left:15px" ng-repeat="submenu in menu.submenu" ng-show="menuDownArrow">
+                                        <li class="nav-link" ng-click="changePage(submenu.link)" style="padding-left: 8px">{{ submenu.name }}</li>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </aside>
+        <main class="col">
+            <nav class="navbar navbar-default navbar-inverse" role="navigation">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="row">
+                    <div ng-include="pageurl"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
